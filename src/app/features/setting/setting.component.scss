@@ -1,23 +1,12 @@
-.login a {
-  color: #5cb85c;
-  text-decoration: none;
-
-  &:hover {
-    color: #3d8b3d;
-    text-decoration: underline;
-  }
-}
-
-.login-form {
+.setting-form {
   display: flex;
   flex-direction: column;
-  max-width: 620px;
-  margin: 16px auto;
   gap: 16px;
-
+  margin: 16px auto;
+  max-width: 662px;
 }
 
-.sign-in-btn {
+.update-btn{
   margin-left: auto;
   background-color: #5cb85c;
   border-color: #5cb85c;
@@ -28,4 +17,6 @@
     border-color: #419641;
   }
 }
-
+.logout-btn{
+  margin-right: auto;
+}
