@@ -1,10 +1,22 @@
 <div class="login text-center">
-  <h1>Sign iup </h1>
-  <a href="#"> Have an account?</a>
-  <form action="" class="login-form">
-    <input type="text" class="form-control form-control-lg" autocomplete="user-name" placeholder="Username">
-    <input type="email" class="form-control form-control-lg" autocomplete="new-email" placeholder="Email">
-    <input type="password" class="form-control form-control-lg" autocomplete="new-password" placeholder="Password">
-    <button type="button" class="btn sign-in-btn btn-lg">Sign up</button>
+  <h1>Sign up </h1>
+  <a [routerLink]="'/sign-in'"> Have an account?</a>
+  <form [formGroup]="signUpFrm" class="login-form">
+    <div class="text-start" *ngIf="errorMessage">
+      <small class="text-danger">{{errorMessage}}</small>
+    </div>
+    <div class="field">
+      <input type="text" formControlName="username" class="form-control form-control-lg" autocomplete="user-name"
+             placeholder="Username">
+    </div>
+    <div class="field">
+      <input type="email" formControlName="email" class="form-control form-control-lg" autocomplete="new-email"
+             placeholder="Email">
+    </div>
+    <div class="field">
+      <input type="password" formControlName="password" class="form-control form-control-lg" autocomplete="new-password"
+             placeholder="Password">
+    </div>
+    <button type="button" (click)="handleSignUp()" class="btn sign-in-btn btn-lg">Sign up</button>
   </form>
 </div>

@@ -1,21 +1,18 @@
 import { NgModule } from "@angular/core";
 import { RouterModule, Routes } from "@angular/router";
-import { NewFeedComponent } from "./features/new-feed/new-feed.component";
-import { SignInComponent } from "./features/sign-in/sign-in.component";
-import { SignUpComponent } from "./features/sign-up/sign-up.component";
 
 export const routes: Routes = [
   {
     path: "",
-    component: NewFeedComponent
+    loadChildren: () => import("./features/new-feed/new-feed.module").then(m => m.NewFeedModule)
   },
   {
     path: "sign-in",
-    component: SignInComponent
+    loadChildren: () => import("./features/sign-in/sign-in.module").then(m => m.SignInModule)
   },
   {
     path: "sign-up",
-    component: SignUpComponent
+    loadChildren: () => import("./features/sign-up/sign-up.module").then(m => m.SignUpModule)
   }
 ];
 
