@@ -11,11 +11,11 @@
           <a class="nav-link nav-hover" [routerLink]="'sign-up'">Sign up</a>
         </div>
       </div>
-    <div class="navbar-nav" *ngIf="user">
+    <div class="navbar-nav" *ngIf="user" (change)="user">
       <a class="nav-link active " aria-current="page" href="#">Home</a>
-      <a class="nav-link nav-hover" [routerLink]="">New Article</a>
-      <a class="nav-link nav-hover" [routerLink]="">Settings</a>
-      <a class="nav-link nav-hover" [routerLink]="">{{user.username}}</a>
+      <a class="nav-link nav-hover" [routerLink]="'new-article'">New Article</a>
+      <a class="nav-link nav-hover" [routerLink]="'setting'">Settings</a>
+      <a class="nav-link nav-hover" [routerLink]="'profile'">{{user.username}}</a>
     </div>
   </div>
 </nav>

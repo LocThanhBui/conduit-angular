@@ -1,19 +1,20 @@
 <div class="setting text-center">
   <h1>Your Settings</h1>
-  <form action="" class="setting-form">
-    <input type="email" class="form-control form-control-lg" autocomplete="new-email" placeholder="Email">
+  <form [formGroup]="settingFrm" class="setting-form">
+    <input type="email" formControlName="email" class="form-control form-control-lg" autocomplete="new-email" placeholder="Email">
     <textarea
+      formControlName="bio"
       rows="6"
       class="form-control form-control-lg"
       placeholder="Short bio about you"
     ></textarea>
-    <input type="email" class="form-control form-control-lg" autocomplete="new-email" placeholder="">
-    <input type="email" class="form-control form-control-lg" autocomplete="new-email" placeholder="New Password">
-    <button type="button" class="btn update-btn btn-lg">
+    <input type="text" formControlName="name" class="form-control form-control-lg" autocomplete="new-email" placeholder="Name">
+    <input type="text" formControlName="password" class="form-control form-control-lg" autocomplete="new-email" placeholder="New Password">
+    <button type="button" (click)="handleUpdateSetting()" class="btn update-btn btn-lg">
       Update Setting
     </button>
     <hr/>
-    <button type="button" class="btn logout-btn btn-outline-danger">
+    <button (click)="logout()" type="submit" class="btn logout-btn btn-outline-danger">
       Or click here to logout
     </button>
   </form>

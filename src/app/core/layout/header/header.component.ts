@@ -1,5 +1,6 @@
 import { Component, OnInit } from "@angular/core";
 import { Router } from "@angular/router";
+import { BehaviorSubject } from "rxjs";
 import { StorageService } from "../../../shared/services/storage.service";
 import { User } from "../../models";
 
@@ -24,6 +25,8 @@ export class HeaderComponent implements OnInit {
 
   getUser() {
     this.user = this.storage.getItemLocalStorage("user");
+
+
   }
 
 

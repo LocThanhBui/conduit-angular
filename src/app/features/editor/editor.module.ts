@@ -3,6 +3,8 @@ import { CommonModule } from '@angular/common';
 import { NewArticleComponent } from "./new-article/new-article.component";
 import { EditArticleComponent } from "./edit-article/edit-article.component";
 import { ArticleFormComponent } from "./article-form/article-form.component";
+import { RouterModule } from '@angular/router';
+import { ReactiveFormsModule } from '@angular/forms';
 
 
 
@@ -13,7 +15,14 @@ import { ArticleFormComponent } from "./article-form/article-form.component";
     ArticleFormComponent
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    RouterModule.forChild([
+      {
+        path:'',
+        component: ArticleFormComponent
+      }
+    ]),
+    ReactiveFormsModule
   ],
   exports:[
     NewArticleComponent,

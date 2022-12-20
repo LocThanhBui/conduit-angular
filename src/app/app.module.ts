@@ -10,6 +10,7 @@ import { SignInModule } from "./features/sign-in/sign-in.module";
 import { TabToggleComponent } from "./shared/components/tab-toggle/tab-toggle.component";
 import { HttpClientModule } from "@angular/common/http";
 import { SignUpComponent } from "./features/sign-up/sign-up.component";
+import { ProfileModule } from "./features/profile/profile.module";
 
 
 @NgModule({
@@ -31,6 +32,7 @@ import { SignUpComponent } from "./features/sign-up/sign-up.component";
     SignInModule,
     AppRoutingModule,
     HttpClientModule,
+    ProfileModule
   ],
   exports: [
     SignUpModule,

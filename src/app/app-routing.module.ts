@@ -13,6 +13,18 @@ export const routes: Routes = [
   {
     path: "sign-up",
     loadChildren: () => import("./features/sign-up/sign-up.module").then(m => m.SignUpModule)
+  },
+  {
+    path: "setting",
+    loadChildren: () => import("./features/setting/setting.module").then(m => m.SettingModule)
+  },
+  {
+    path:'profile',
+    loadChildren:() => import("./features/profile/profile.module").then(m => m.ProfileModule)
+  },
+  {
+    path:'new-article',
+    loadChildren: () => import("./features/editor/editor.module").then(m => m.EditorModule)
   }
 ];
 

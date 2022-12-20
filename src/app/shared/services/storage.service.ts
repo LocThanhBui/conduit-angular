@@ -1,12 +1,20 @@
 import { Injectable } from "@angular/core";
+import { BehaviorSubject } from "rxjs";
+import { User } from "../../core/models";
 
 @Injectable({
   providedIn: "root"
 })
 export class StorageService {
 
+
+
   constructor() {
   }
+
+  // setInfoUser(username: User) {
+  //   this.infoUser.next(username);
+  // }
 
   getItemLocalStorage<T = string>(key: string): T | null {
     const data = localStorage.getItem(key);
@@ -24,7 +32,7 @@ export class StorageService {
     }
   }
 
-  removeItemLocaLStorage(key: string){
-    localStorage.removeItem(key)
+  removeItemLocaLStorage(key: string) {
+    localStorage.removeItem(key);
   }
 }
